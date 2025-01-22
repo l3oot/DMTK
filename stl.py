@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 import gspread
-import json
+import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib import rcParams
 import numpy as np
-rcParams["font.family"] = "Tahoma"
+
 key = {
     "type": "service_account",
     "project_id": "genuine-ember-403902",
@@ -22,6 +22,8 @@ key = {
 }
 rcParams["font.family"] = "Tahoma"
 # Configure Streamlit page
+matplotlib.rcParams['font.family'] = 'TH Sarabun New'
+
 st.set_page_config(page_title="ระบบวิเคราะห์ข้อมูลการนัดหมาย", layout="wide")
 
 
