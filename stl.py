@@ -20,7 +20,8 @@ key = {
     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rpa-643%40genuine-ember-403902.iam.gserviceaccount.com",
     "universe_domain": "googleapis.com",
 }
-rcParams["font.family"] = "Tahoma"
+rcParams['font.sans-serif'] = ['Tahoma', 'DejaVu Sans',
+                               'Lucida Grande', 'Verdana']
 # Configure Streamlit page
 st.set_page_config(page_title="ระบบวิเคราะห์ข้อมูลการนัดหมาย", layout="wide")
 
