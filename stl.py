@@ -6,8 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib import rcParams
 import numpy as np
-import matplotlib.font_manager as fm
-
+rcParams["font.family"] = "Tahoma"
 key = {
     "type": "service_account",
     "project_id": "genuine-ember-403902",
@@ -21,26 +20,7 @@ key = {
     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rpa-643%40genuine-ember-403902.iam.gserviceaccount.com",
     "universe_domain": "googleapis.com",
 }
-def setup_thai_font():
-    # Try to use Sarabun font first (common Thai font), fall back to TH Sarabun New, then any system Thai font
-    thai_fonts = ['Sarabun', 'TH Sarabun New', 'Tahoma']
-    font_set = False
-    
-    for font in thai_fonts:
-        try:
-            fm.findfont(font)
-            plt.rcParams['font.family'] = font
-            font_set = True
-            break
-        except:
-            continue
-    
-    if not font_set:
-        st.warning("ไม่พบฟอนต์ภาษาไทยในระบบ อาจทำให้การแสดงผลภาษาไทยไม่สมบูรณ์")
-    
-    # Increase default font size for better readability
-    plt.rcParams['font.size'] = 12
-    
+rcParams["font.family"] = "Tahoma"
 # Configure Streamlit page
 st.set_page_config(page_title="ระบบวิเคราะห์ข้อมูลการนัดหมาย", layout="wide")
 
