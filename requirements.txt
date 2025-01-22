@@ -1,0 +1,4 @@
+gspread
+matplotlib
+seaborn
+numpy
